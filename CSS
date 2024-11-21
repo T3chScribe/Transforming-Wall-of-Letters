@@ -1,0 +1,42 @@
+* {
+    margin: 2;
+    padding: 2;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+}
+
+.tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    grid-template-rows: repeat(4, 250px);
+    gap: 1px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 12rem;
+    color: white;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    transform: scale(2.2);
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
