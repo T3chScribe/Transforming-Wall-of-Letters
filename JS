@@ -1,0 +1,16 @@
+const cells = document.querySelectorAll('.cell');
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function randomLetter() {
+    return letters.charAt(Math.floor(Math.random() * letters.length));
+}
+
+cells.forEach((cell) => {
+    cell.addEventListener('mouseover', () => {
+        cell.textContent = randomLetter();
+    });
+
+    cell.addEventListener('mouseout', () => {
+        cell.textContent = letters[cells.indexOf(cell)]; // Reset to original letter
+    });
+});
